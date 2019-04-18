@@ -1,0 +1,24 @@
+1.安全
+
+2.稳定
+      1.把事件任意派发和任意接收规避。
+3.适配
+
+4.规范
+      命名规范
+          1.文件夹/文件/类/变量/方法等 一律用下划线命名规则
+          2.文件夹/文件/类/变量/方法等 最后要加个人名字缩写 例如:Hall_scene_zpb
+      注释规范
+          1.类/变量/方法/功能 必须加注释
+          2.注释开头先写名字缩写  例如：//zpb: 这是干嘛的
+
+      自定义事件 必须统一在 Const_model 声明
+
+      非父子级之间 只能通过派发事件 （非特殊情况下）禁止直接调用
+      非父子级之间 model和view/scene 禁止直接通信 需要  model-model(子）-view/scene(父）
+      父子级之间 model不能直接调用 父级scene/view 的方法，只能通过派发事件
+      自定义派发事件 (全部用封装形式)
+            control(不同场景）->control(不同场景） c_to_c_event_radio
+            model(子）->model(父）             m_to_c_dis_event
+            model(子）->control/scene/view(父）m_to_c_dis_event
+            view(子）-scene/view(父）          v_to_v_dis_event

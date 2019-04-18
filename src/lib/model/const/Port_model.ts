@@ -1,0 +1,227 @@
+/**
+ * Created by 周鹏斌大王 on 2017-12-23.
+ * 接口定义
+ * 丹阳特有-不用合并
+ */
+class Port_model{
+    private static model:Port_model;
+    public static getInstance(){
+        if(!this.model){
+            this.model=new Port_model();
+        }
+        return this.model;
+    }
+    /*zpb:接口*/
+    public SOCKET_DATA_EVENT="socket_event_";//数据返回事件
+    public CONFIG={
+        fields_analysis:{//字段解析编码信息
+            interfaceId:"100999",
+            tips:"字段解析编码信息"
+        },
+        //----------------------大接口--------------------------
+        mainInfo:{//大接口定义
+            interfaceId:"100100",
+            tips:"大接口数据"
+        },
+
+        //----------------------大厅主界面--------------------------
+        hall_managerList:{/*大厅-查看系统消息列表*/
+            interfaceId:"100003",
+            tips:"大厅-系统消息"
+        },
+        hall_achievement:{/*大厅-战绩查询*/
+            interfaceId:"100002",
+            tips:"大厅-战绩查询"
+        },
+        hall_contactUs:{/*大厅-联系我们*/
+            interfaceId:"100004",
+            tips:"大厅-联系我们"
+        },
+        hall_feedback:{/*大厅-反馈*/
+            interfaceId:"100006",
+            tips:"大厅-反馈"
+        },
+        hall_createRoom:{/*大厅-创建房间*/
+            interfaceId:"100007",
+            tips:"大厅-创建房间"
+        },
+        hall_joinRoom:{/*大厅-加入房间*/
+            interfaceId:"100008",
+            tips:"大厅-加入房间"
+        },
+        hall_consentUA:{/*大厅-发起-同意用户协议*/
+            interfaceId:"100009",
+            tips:"大厅-发起-同意用户协议"
+        },
+        //----------------------代开--------------------------
+        hall_currentReplaceRoom:{ /*大厅-发起-获取代开房间信息*/
+            interfaceId:"100010",
+            tips:"大厅-发起-获取代开房间信息"
+        },
+        hall_historyReplaceRoom:{/*大厅-发起-获取代开房间历史记录*/
+            interfaceId:"100011",
+            tips:"大厅-发起-获取代开房间历史记录"
+        },
+        hall_dissolveReplaceRoom:{/*大厅-发起-代开模式房主解散房间*/
+            interfaceId:"100013",
+            tips:"大厅-发起-代开模式房主解散房间"
+        },
+        hall_deleteUser:{/*大厅-发起-房主踢人*/
+            interfaceId:"100012",
+            tips:"大厅-发起-房主踢人"
+        },
+        hall_orderDissolveReplaceRoom:{/*发起-代开-强制解散房间*/
+            interfaceId:"100015",
+            tips:"发起-代开-强制解散房间"
+        },
+        hall_onLine_issueRoom:{/*---大厅 代开房间用户加入*/
+            interfaceId:"100112",
+            tips:"大厅-玩家加入代开房间"
+        },
+        hall_issueRoom_star_game:{/*---大厅 代开房间开始游戏*/
+            interfaceId:"100115",
+            tips:"大厅-代开房间游戏开局"
+        },
+        hall_issueRoom_delete:{/*---大厅 代开房间用户加入*/
+            interfaceId:"100140",
+            tips:"大厅-代开房间解散房间回应"
+        },
+        record_bogus_info:{/*---*/
+            interfaceId:"100400",
+            tips:"战绩"
+        },
+        issue_history_info:{/*---*/
+            interfaceId:"100401",
+            tips:"代开历史"
+        },
+	//----------------------回放------------------
+        hall_roomPlaybackList:{/*---发起-回放列表-某个房间每小局数据列表*/
+            interfaceId:"100014",
+            tips:"大厅-回放列表-获取某个房间每小局数据列表"
+        },
+        //----------------------俱乐部--------------------------
+        club_request_join:{/*确认加入俱乐部*/
+            interfaceId:"500000",
+            tips:"确认加入俱乐部"
+        },
+        club_request_join_before:{/*申请加入俱乐部---扫二维码出弹窗*/
+            interfaceId:"500001",
+            tips:"申请加入俱乐部前查询"
+        },
+        club_my_list:{/*获取我的俱乐部列表*/
+            interfaceId:"500002",
+            tips:"获取我的俱乐部列表"
+        },
+        club_info:{/*获取俱乐部详细信息*/
+            interfaceId:"500003",
+            tips:"获取俱乐部详细信息"
+        },
+        club_create_room:{/*创建俱乐部房间*/
+            interfaceId:"500004",
+            tips:"创建俱乐部房间"
+        },
+        club_join_room:{/*加入俱乐部房间*/
+            interfaceId:"500005",
+            tips:"加入俱乐部房间"
+        },
+        club_get_my_info:{/*获取俱乐部我的成绩*/
+            interfaceId:"500006",
+            tips:"获取俱乐部我的成绩"
+        },
+        club_request_leave:{/*申请离开俱乐部*/
+            interfaceId:"500007",
+            tips:"申请离开俱乐部"
+        },
+        club_history_info:{/*---俱乐部战绩*/
+            interfaceId:"100402",
+            tips:"俱乐部战绩"
+        },
+        //-----------------------------------房间内部接口--------------------------------------------
+        game_smallSettlement:{/*游戏-小结算*/
+            interfaceId:"100102",
+            tips:"游戏-小结算"
+        },
+        game_bigSettlement:{/*游戏-大结算*/
+            interfaceId:"100103",
+            tips:"游戏-大结算"
+        },
+        game_chatAni:{/*---接收 其他玩家的表情文字语音*/
+            interfaceId:"100206",
+            tips:"游戏-其他玩家的表情文字语音消息"
+        },
+        game_executeAction:{//----------游戏-发起-玩家行为
+            interfaceId:"100201",
+            tips:"游戏-玩家发起动作/行为"
+        },
+        game_executeAction_respond:{//---------游戏-接受--玩家行为
+            interfaceId:"100104",
+            tips:"游戏-动作执行-回应"
+        },
+	game_settlementWaitOk:{/*---发起 小局结束 准备下一局*/
+            interfaceId:"100200",
+            tips:"游戏-当前玩家小结算确认"
+        },
+        game_dissolveRoom:{/*---发起解散房间*/
+            interfaceId:"100203",
+            tips:"游戏-发起解散房间"
+        },
+        game_dissolveRoomAgree:{/*---接收解散房间时，其他玩家的同意状态*/
+            interfaceId:"100204",
+            tips:"游戏-解散房间 玩家(包括自己) 同意/拒绝 操作"
+        },
+        game_quitRoom:{/*---接收解散房间时，其他玩家的同意状态*/
+            interfaceId:"100205",
+            tips:"游戏-等待阶段退出房间"
+        },
+        game_beRemovedPlayer:{/*----玩家被踢提示---*/
+            interfaceId:"100107",
+            tips:"玩家被踢提示"
+        },
+         game_on_or_Live_State:{/*---游戏中玩家在线状态切换*/
+            interfaceId:"100109",
+            tips:"游戏-玩家在线状态切换"
+        },
+
+        //------------------------通用----------------------------
+        game_actionIDError:{/*---动作ID或大接口ID 出错（过时）*/
+            interfaceId:"100108",
+            tips:"动作ID或大接口ID 出错（过时）"
+        },
+        heartbeat:{/*---心跳连接*/
+            interfaceId:"100000",
+            tips:"游戏-心跳"
+        },
+        repetitionLogin:{/*---重复登录*/
+            interfaceId:"100106",
+            tips:"游戏-重复登录警告"
+        },
+        qiangzhijiesan:{
+            interfaceId:"999800",
+            tips:"强制解散房间",
+        },
+        getSystemCard:{/*---获取系统剩余牌*/
+            interfaceId:"999998",
+            tips:"游戏-获取系统剩余牌"
+        },
+        setSystemCard:{/*---设置系统剩余牌*/
+            interfaceId:"999999",
+            tips:"游戏-获取系统剩余牌"
+        },
+        setStopCard:{/*---设置玩家手牌*/
+            interfaceId:"999997",
+            tips:"游戏-设置玩家手牌"
+        },
+        network:{/*---网络质量*/
+            interfaceId:"999997",
+            tips:"游戏-网络质量"
+        },
+        positioning:{/*---测距离*/
+            interfaceId:"100016",
+            tips:"游戏-发送坐标信息"
+        },
+        get_position_info:{/*---获取距离*/
+            interfaceId:"100207",
+            tips:"游戏-获取距离"
+        }
+    }
+}

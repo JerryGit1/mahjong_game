@@ -1,0 +1,10 @@
+{"file":"play_back.png","frames":{
+"g_pb_home":{"x":152,"y":156,"w":60,"h":58,"offX":5,"offY":6,"sourceW":70,"sourceH":70},
+"g_pb_play":{"x":152,"y":78,"w":64,"h":66,"offX":3,"offY":2,"sourceW":70,"sourceH":70},
+"g_pb_stop":{"x":76,"y":156,"w":64,"h":66,"offX":3,"offY":2,"sourceW":70,"sourceH":70},
+"g_pb_x1_a":{"x":152,"y":0,"w":64,"h":66,"offX":3,"offY":2,"sourceW":70,"sourceH":70},
+"g_pb_x1_l":{"x":76,"y":78,"w":64,"h":66,"offX":3,"offY":2,"sourceW":70,"sourceH":70},
+"g_pb_x5_a":{"x":0,"y":156,"w":64,"h":66,"offX":3,"offY":2,"sourceW":70,"sourceH":70},
+"g_pb_x5_l":{"x":76,"y":0,"w":64,"h":66,"offX":3,"offY":2,"sourceW":70,"sourceH":70},
+"g_pb_x10_a":{"x":0,"y":78,"w":64,"h":66,"offX":3,"offY":2,"sourceW":70,"sourceH":70},
+"g_pb_x10_l":{"x":0,"y":0,"w":64,"h":66,"offX":3,"offY":2,"sourceW":70,"sourceH":70}}}

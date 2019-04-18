@@ -1,0 +1,57 @@
+/**
+ * Created by 周鹏斌大王 on 2018-04-16.
+ */
+class Game_room_event_model extends Game_event_model{
+    public room={
+        update_room_view:"update_room_view",//更新房间视图
+        leave_room:"leave_room",//发起离开房间
+        start_game:"start_game",//发起开局
+        initiate_action:"initiate_action",//发起动作
+        player_Enough_No:"player_Enough_No",//玩家没凑齐
+        player_Enough_Yes:"player_Enough_Yes",//玩家凑齐
+        choose_pufen:"choose_pufen",//选择铺分
+        set_up_layer_touch_event:"set_up_layer_touch_event",//玩家拖动牌时候消除顶层事件
+        tips_self_choose_base_stop_card_num:"tips_self_choose_base_stop_card",//提示玩家选择的牌在所有牌堆的数量
+        self_send_card:"self_send_card",//玩家出牌
+        m_c_user_join:"m_c_user_join",//新玩家加入
+        m_c_leave_room:"m_c_leave_room",//有人离开房间
+        m_c_system_deal_card:"m_c_system_deal_card",//系统发牌
+        m_c_user_send_card:"m_c_user_send_card",//玩家出牌
+        m_c_user_chi_card:"m_c_user_chi_card",//玩家吃牌
+        m_c_user_peng_card:"m_c_user_peng_card",//玩家碰牌
+        m_c_user_gang_card:"m_c_user_gang_card",//玩家杠牌
+        m_c_user_guo_card:"m_c_user_guo_card",//玩家过
+        m_c_user_hu_card:"m_c_user_hu_card",//玩家和
+        m_c_user_lj_card:"m_c_user_lj_card",//流局
+        m_c_user_xjs:"m_c_user_xjs",//小结算回应
+        m_c_user_djs:"m_c_user_djs",//大结算回应
+        m_c_user_prepared:"m_c_user_prepared_card",//准备界面更新
+        r_room_dissolution_room:"r_room_dissolution_room",//房间解散房间回应;
+        r_player_chat_status:"r_player_chat_status",//房间收到聊天信息;
+	r_change_money:"r_change_money",//改变房卡数量
+        play_back_home:"play_back_home",//回放返回大厅
+        user_line_status_change:"user_line_status_change",//玩家在线状态改变
+    }
+    room_popup={
+        look_user_info:"look_user_info",//查看用户信息
+	dissolve_room:"dissolve_room",//解散房间
+        kicking_user:"kicking_user",//房主踢人
+	float_tips:"float_tips",//浮层提示
+        r_room_dissolution_room:"r_room_dissolution_room",//解散房间回应-》弹框
+        is_agree_diss_room:"is_agree_diss_room",//解散房间回应-》同意or拒绝
+        sponsor_DJS:"sponsor_DJS",//解散房间成功-》发起大结算
+        add_xjs_pop:"add_xjs_pop",//小结算弹框
+        add_djs_pop:"add_djs_pop",//大结算弹框
+        show_user_info_popup:"show_user_info_popup",//查看用户信息
+        share:"share",//分享按钮点击
+        share_popup:"share_popup",//分享弹框
+        setup_popup:"setup_popup",//设置弹框
+        rule:"rule",//规则按钮点击
+        add_rule_pop:"add_rule_pop",//规则弹框
+        chitchat:"chitchat",//聊天弹框
+        location:"location",//定位弹框
+        sponsor_chat:"sponsor_chat",//发起聊天
+        sponsor_dissolve_room:"sponsor_dissolve_room",//设置弹框-》发起解散房间
+        XJS_wait_ok:"XJS_wait_ok",//小结算-准备-OK;
+    };
+}

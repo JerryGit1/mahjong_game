@@ -1,0 +1,13 @@
+{"file":"p_player_score.png","frames":{
+"3":{"x":0,"y":90,"w":20,"h":30,"offX":2,"offY":1,"sourceW":25,"sourceH":33},
+"4":{"x":0,"y":0,"w":23,"h":30,"offX":1,"offY":1,"sourceW":25,"sourceH":33},
+"5":{"x":21,"y":60,"w":20,"h":29,"offX":2,"offY":2,"sourceW":25,"sourceH":33},
+"6":{"x":23,"y":0,"w":21,"h":30,"offX":2,"offY":1,"sourceW":25,"sourceH":33},
+"7":{"x":43,"y":30,"w":21,"h":29,"offX":1,"offY":2,"sourceW":25,"sourceH":33},
+"8":{"x":22,"y":30,"w":21,"h":30,"offX":2,"offY":1,"sourceW":25,"sourceH":33},
+"9":{"x":0,"y":60,"w":21,"h":30,"offX":2,"offY":1,"sourceW":25,"sourceH":33},
+"-":{"x":41,"y":82,"w":22,"h":5,"offX":2,"offY":14,"sourceW":25,"sourceH":33},
+"+":{"x":41,"y":60,"w":22,"h":22,"offX":2,"offY":5,"sourceW":25,"sourceH":33},
+"0":{"x":0,"y":30,"w":22,"h":30,"offX":1,"offY":1,"sourceW":25,"sourceH":33},
+"1":{"x":20,"y":90,"w":12,"h":29,"offX":5,"offY":2,"sourceW":25,"sourceH":33},
+"2":{"x":44,"y":0,"w":20,"h":30,"offX":2,"offY":1,"sourceW":25,"sourceH":33}}}

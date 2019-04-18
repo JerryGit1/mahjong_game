@@ -1,0 +1,238 @@
+<head>
+    <meta charset="utf-8">
+    <title>&#x4E39;&#x9633;&#x63A8;&#x5012;&#x80E1;</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="full-screen" content="true">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="360-fullscreen" content="true">
+    <style>
+        html, body {
+            -ms-touch-action: none;
+            background: #888888;
+            padding: 0;
+            border: 0;
+            margin: 0;
+            height: 100%;
+        }
+    </style>
+
+    <!--这个标签为通过egret提供的第三方库的方式生成的 javascript 文件。删除 modules_files 标签后，库文件加载列表将不会变化，请谨慎操作！-->
+    <!--modules_files_start-->
+	<script egret="lib" src="libs/modules/egret/egret.js" src-release="libs/modules/egret/egret.min.js"></script>
+	<script egret="lib" src="libs/modules/egret/egret.web.js" src-release="libs/modules/egret/egret.web.min.js"></script>
+	<script egret="lib" src="libs/modules/game/game.js" src-release="libs/modules/game/game.min.js"></script>
+	<script egret="lib" src="libs/modules/tween/tween.js" src-release="libs/modules/tween/tween.min.js"></script>
+	<script egret="lib" src="libs/modules/res/res.js" src-release="libs/modules/res/res.min.js"></script>
+	<script egret="lib" src="libs/modules/socket/socket.js" src-release="libs/modules/socket/socket.min.js"></script>
+	<script egret="lib" src="libs/modules/particle/particle.js" src-release="libs/modules/particle/particle.min.js"></script>
+	<!--modules_files_end-->
+
+    <!--这个标签为不通过egret提供的第三方库的方式使用的 javascript 文件，请将这些文件放在libs下，但不要放在modules下面。-->
+    <!--other_libs_files_start-->
+    <script egret="lib" src="polyfill/promise.js" src-release="polyfill/promise.min.js"></script>
+    <!--other_libs_files_end-->
+
+    <!--这个标签会被替换为项目中所有的 javascript 文件。删除 game_files 标签后，项目文件加载列表将不会变化，请谨慎操作！-->
+    <!--game_files_start-->
+	<script egret="game" src="bin-debug/lib/model/Base_model.js"></script>
+	<script egret="game" src="bin-debug/lib/model/Scene_model.js"></script>
+	<script egret="game" src="bin-debug/lib/view/Base_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/model/user/Base_user_model.js"></script>
+	<script egret="game" src="bin-debug/lib/model/const/event/Base_event_model.js"></script>
+	<script egret="game" src="bin-debug/mvc/model/user/User_model.js"></script>
+	<script egret="game" src="bin-debug/mvc/model/event/Game.js"></script>
+	<script egret="game" src="bin-debug/mvc/model/game/room/card/Base_card_model.js"></script>
+	<script egret="game" src="bin-debug/lib/control/Base_control.js"></script>
+	<script egret="game" src="bin-debug/lib/model/service/Base_service_model.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/game/room/Base_wait_view.js"></script>
+	<script egret="game" src="bin-debug/lib/model/const/Port_model.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/game/room/card_cpg/Cpg_base_card_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/game/room/card_user/Base_user_card_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/module/btn/Button.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/Base_popup.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/room/chat/Chat_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/Sound_btn.js"></script>
+	<script egret="game" src="bin-debug/lib/view/tool/AH_console.js"></script>
+	<script egret="game" src="bin-debug/lib/view/tool/check_box_arr.js"></script>
+	<script egret="game" src="bin-debug/Main.js"></script>
+	<script egret="game" src="bin-debug/mvc/control/Ani_control.js"></script>
+	<script egret="game" src="bin-debug/mvc/control/Game_control.js"></script>
+	<script egret="game" src="bin-debug/mvc/control/game/Game_club_control.js"></script>
+	<script egret="game" src="bin-debug/mvc/control/game/Game_hall_control.js"></script>
+	<script egret="game" src="bin-debug/mvc/control/game/Game_room_control.js"></script>
+	<script egret="game" src="bin-debug/mvc/control/Load_control.js"></script>
+	<script egret="game" src="bin-debug/mvc/control/Popup_control.js"></script>
+	<script egret="game" src="bin-debug/mvc/model/Ani_model.js"></script>
+	<script egret="game" src="bin-debug/mvc/model/event/Ani.js"></script>
+	<script egret="game" src="bin-debug/mvc/model/event/Game_club.js"></script>
+	<script egret="game" src="bin-debug/mvc/model/event/Game_hall.js"></script>
+	<script egret="game" src="bin-debug/mvc/model/event/Game_room.js"></script>
+	<script egret="game" src="bin-debug/test/zwb_1.js"></script>
+	<script egret="game" src="bin-debug/mvc/model/event/Load.js"></script>
+	<script egret="game" src="bin-debug/mvc/model/event/Manager.js"></script>
+	<script egret="game" src="bin-debug/mvc/model/event/Popup.js"></script>
+	<script egret="game" src="bin-debug/mvc/model/Game_model.js"></script>
+	<script egret="game" src="bin-debug/mvc/model/game/Club_model.js"></script>
+	<script egret="game" src="bin-debug/mvc/model/game/club/Club_base_model.js"></script>
+	<script egret="game" src="bin-debug/mvc/model/game/club/Club_room_model.js"></script>
+	<script egret="game" src="bin-debug/mvc/model/game/Hall_model.js"></script>
+	<script egret="game" src="bin-debug/mvc/model/game/Room_model.js"></script>
+	<script egret="game" src="bin-debug/mvc/model/game/room/card/Action_model.js"></script>
+	<script egret="game" src="bin-debug/lib/model/config/Config_model.js"></script>
+	<script egret="game" src="bin-debug/mvc/model/game/room/card/CPG_card_model.js"></script>
+	<script egret="game" src="bin-debug/mvc/model/game/room/card/Play_card_model.js"></script>
+	<script egret="game" src="bin-debug/mvc/model/game/room/Match_model.js"></script>
+	<script egret="game" src="bin-debug/mvc/model/game/room/Play_back_model.js"></script>
+	<script egret="game" src="bin-debug/mvc/model/game/room/Room_info_model.js"></script>
+	<script egret="game" src="bin-debug/mvc/model/Load_model.js"></script>
+	<script egret="game" src="bin-debug/mvc/model/Manager_model.js"></script>
+	<script egret="game" src="bin-debug/mvc/model/Popup_model.js"></script>
+	<script egret="game" src="bin-debug/mvc/model/popup/Dissolve_room_model.js"></script>
+	<script egret="game" src="bin-debug/mvc/model/popup/DJS_model.js"></script>
+	<script egret="game" src="bin-debug/mvc/model/popup/Location_model.js"></script>
+	<script egret="game" src="bin-debug/mvc/model/popup/XJS_model.js"></script>
+	<script egret="game" src="bin-debug/lib/model/const/Route_model.js"></script>
+	<script egret="game" src="bin-debug/mvc/model/user/Dissolve_room_user_model.js"></script>
+	<script egret="game" src="bin-debug/mvc/model/user/DJS_user_model.js"></script>
+	<script egret="game" src="bin-debug/mvc/model/user/User_group_model.js"></script>
+	<script egret="game" src="bin-debug/lib/model/config/Game_url_model.js"></script>
+	<script egret="game" src="bin-debug/mvc/model/user/XJS_user_model.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/Ani_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/Game_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/game/Club_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/game/club/main/Club_btn.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/game/club/main/Club_main_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/game/club/square/Club_square_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/game/club/square/Club_table_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/game/Hall_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/game/hall/Marquee_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/game/hall/Record_playback_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/game/hall/Tip_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/game/Room_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/game/room/action_cpgh/Cpg_btn_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/game/room/action_cpgh/Cpg_card_btn_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/game/room/action_cpgh/Cpgh_btn_list_view.js"></script>
+	<script egret="game" src="bin-debug/lib/model/config/Url_data_model.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/game/room/bg/Location_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/game/room/card_cpg/An_gang_card_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/game/room/card_cpg/Base_card_view.js"></script>
+	<script egret="game" src="bin-debug/lib/model/service/Http_service_model.js"></script>
+	<script egret="game" src="bin-debug/lib/model/service/Statistic_service_model.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/game/room/card_cpg/Gang_card_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/game/room/card_cpg/Peng_card_view.js"></script>
+	<script egret="game" src="bin-debug/lib/model/service/webSocketService.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/game/room/card_user/User1_card_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/game/room/card_user/User2_card_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/game/room/card_user/User3_card_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/game/room/card_user/User4_card_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/game/room/Chat_text_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/game/room/Match_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/game/room/Playback_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/game/room/Prepare_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/game/room/Room_bg_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/game/room/Room_head_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/game/room/Wait_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/Load_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/load/Data_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/load/Resource_view.js"></script>
+	<script egret="game" src="bin-debug/lib/model/service/weixinJSSDKService.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/module/btn/Double_btn_tyq.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/module/btn/On_off_btn.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/module/user_head/Base_user_head.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/module/user_head/Room_user_head.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/Popup_view.js"></script>
+	<script egret="game" src="bin-debug/lib/model/Sound_model.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/Bg_music_btn.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/club/Club_my_info_popup.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/club/Club_request_join_popup.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/club/Club_request_leave_popup.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/club/view/Club_achievement_list_today.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/club/view/Club_achievement_list_yesterday.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/club/view/Club_achievement_single_today.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/club/view/Club_achievement_single_yesterday.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/General_popup.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/hall/Achievement_single_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/hall/Apply_join_club_popup.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/hall/Create_classic_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/hall/Create_gaizhou_View.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/hall/Create_room_popup.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/hall/Effect_sound_btn.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/hall/Help_popup.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/hall/Hint_popup.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/hall/Issue_cell_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/hall/Issue_history_cell.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/hall/Issue_history_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/hall/Issue_list_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/hall/Issue_popup.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/hall/issue/Issue_list_popup.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/hall/Join_room_popup.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/hall/Playback_record_popup.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/hall/Record_popup.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/hall/record/Playback_list_popup.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/hall/record/Record_list_popup.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/hall/Setting_popup.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/hall/Share_popup.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/hall/Tip_popup.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/hall/User_agree_popup.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/hall/User_info_popup.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/Kicking_user_popup.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/room/Chat_popup.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/room/chat/Chat_1_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/room/chat/Chat_2_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/room/chat/Chat_3_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/room/chat/Chat_btn_list_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/room/chat/Chat_layer_view.js"></script>
+	<script egret="game" src="bin-debug/lib/model/const/Const_model.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/room/Chitchat_popup.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/room/Dissolve_room_popup.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/room/DJS_popup.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/room/djs/DJS_user_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/room/Location_popup.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/room/XJS_popup.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/room/xjs/XJS_user_view.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/Rule_tip_pop.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/Share_popup.js"></script>
+	<script egret="game" src="bin-debug/lib/view/check_box.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/popup/User_info_popup.js"></script>
+	<script egret="game" src="bin-debug/test/CJTest_info.js"></script>
+	<script egret="game" src="bin-debug/test/Stand_alone_service_model.js"></script>
+	<script egret="game" src="bin-debug/test/Test_popup.js"></script>
+	<script egret="game" src="bin-debug/test/zpb_1.js"></script>
+	<script egret="game" src="bin-debug/mvc/view/game/room/card_cpg/Chi_card_view.js"></script>
+	<!--game_files_end-->
+</head>
+<body>
+
+    <div style="margin: auto;width: 100%;height: 100%;" class="egret-player" data-entry-class="Main" data-orientation="auto" data-scale-mode="showAll" data-frame-rate="30" data-content-width="1136" data-content-height="720" data-show-paint-rect="false" data-multi-fingered="2" data-show-fps="false" data-show-log="false" data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9" ah_demo_save_time="1528884944063">
+    </div>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+	<script src="http://www.aoh5.com:8086/h5/web/release/version/AH_tester.js"></script>
+    <script>
+        /**
+         * {
+         * "renderMode":, //引擎渲染模式，"canvas" 或者 "webgl"
+         * "audioType": 0 //使用的音频类型，0:默认，1:qq audio，2:web audio，3:audio
+         * "antialias": //WebGL模式下是否开启抗锯齿，true:开启，false:关闭，默认为false
+         * "retina": //是否基于devicePixelRatio缩放画布
+         * }
+         **/
+        /**
+		 *vId 1本地测试模式 service_id=nosocket 单机版
+		 *vId 2线上测试模式
+		 *vId 3线上发布模式
+         */
+
+        var AH_param = {
+            cId:34,mId:1,gId:1,
+            openId:"wsw-1",
+            vId:3,service_id:"alpha",
+            state:""
+        };
+        AH_param=decodeURIComponent(JSON.stringify(AH_param));
+        egret.runEgret({renderMode:"canvas", audioType:0});
+    </script>
+
+
+</body>
